@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<title >webserv's super html page</title>
+
+<style>
+  body {
+    min-height: 100vh;
+    background: #eceffd;
+}
+
+
+
+
+.menu1 a:hover{
+    background-color:#C8FFD4;
+}
+
+
+.container { 
+    position: relative;
+  }
+  
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+/* hightligh */
+
+.container {
+    line-height: 1;
+    text-align: center;
+    padding: 20px;
+    color: #333;
+  }
+  
+  h1 {
+    font-size: 30px;
+  }
+  
+  p {
+    font-size: 13px;
+  }
+  p small {
+    font-size: 80%;
+    color: #666;
+  }
+  
+  .highlight-container, .highlight {
+    position: relative;
+  }
+  
+  .highlight-container {
+    display: inline-block;
+  }
+  .highlight-container:before {
+    content: " ";
+    display: block;
+    height: 90%;
+    width: 100%;
+    margin-left: -3px;
+    margin-right: -3px;
+    position: absolute;
+    background: #FDFDBD;
+    transform: rotate(2deg);
+    top: -1px;
+    left: -1px;
+    border-radius: 20% 25% 20% 24%;
+    padding: 10px 3px 3px 10px;
+  }
+
+
+
+ .container { 
+  height: 100px;
+  position: relative;
+}
+#tilt {
+        display: block;
+        height: 800px; /*Need to adjust this based on image height and width */
+        width: 800px; /*Need to adjust this based on image height and width */
+        margin: 0 auto;
+        transition: box-shadow 0.1s, transform 0.1s;
+        background-image: url("cookies.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+      #tilt:hover {
+        cursor: pointer;
+      }
+
+</style>
+
+<body id =\"all\" style="font-family: 'Courier New', Courier, monospace, serif;margin: 0em; padding: 0em; ">
+
+<div class="header" style="display:block; background-color: #B1AFFF; text-align: center; padding: 15px; "><h1 style="
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 10px;font-family: 'Courier New', Courier, monospace, serif;  ">
+<h1 style="font-weight: bold; font-size: 30px; 
+margin-top: 0px; 
+margin-bottom: 10px;  "><a style="text-decoration: none;" href="/html/home.html"><span class="highlight-container"><span class="highlight">WEBSERV</span></span></a>
+</div>
+
+
+<div class="menu" style="padding: 0; margin: 0; background-color: #B8E8FC;
+text-align: center;" >
+    <ul class="menu1" style=" margin: 0em; padding: 0em; list-style-type: none; overflow: hidden; justify-content:center ;">
+        <li style="display: inline; list-style: none;"><a href="/html/home.html" style=" display:inline-block; margin: 0 30px; color: #B1AFFF; font-weight: 800; text-align: center; padding: 14px 16px; text-decoration: none;">accueil</a></li>
+        <li style="display: inline; list-style: none;"><a href="/html/galerie.php" style=" display:inline-block; margin: 0 30px; color: #B1AFFF; font-weight: 800; text-align: center; padding: 14px 16px; text-decoration: none;">Delete img</a></li>
+        <li style="display: inline; list-style: none;"><a href="/html/text.php" style=" display:inline-block; margin: 0 30px; color: #B1AFFF; font-weight: 800; text-align: center; padding: 14px 16px; text-decoration: none;">text</a></li>
+        <li style="display: inline; list-style: none;"><a href="/html/cookies.html" style=" display:inline-block; margin: 0 30px; color: #B1AFFF; font-weight: 800; text-align: center; padding: 14px 16px; text-decoration: none;">Cookies</a></li>
+        <li style="display: inline; list-style: none;"><a href="/html/upload.php" style=" display:inline-block; margin: 0 30px; color: #B1AFFF; font-weight: 800; text-align: center; padding: 14px 16px; text-decoration: none;">upload img</a></li>
+        <li style="display: inline; list-style: none;"><a href="/html/py/post_py.html" style=" display:inline-block; margin: 0 30px; color: #B1AFFF; font-weight: 800; text-align: center; padding: 14px 16px; text-decoration: none;">bonus cgi</a></li>
+      </ul>
+    </div>
+
+<hr>
+
+
+
+<p style="font-family: 'Courier New', Courier, monospace, serif; text-align: center; font-size: x-large; font-weight: bold;">on teste les cookies</p>
+
+<hr>
+
+
+        
+    <div id="tilt"></div>
+    <script>
+      let el = document.getElementById("tilt");
+      const height = el.clientHeight;
+      const width = el.clientWidth;
+      el.addEventListener("mousemove", handleMove);
+      function handleMove(e) {
+        const xVal = e.layerX;
+        const yVal = e.layerY;
+        const yRotation = 20 * ((xVal - width / 2) / width);
+        const xRotation = -20 * ((yVal - height / 2) / height);
+        const string =
+          "perspective(500px) scale(1.1) rotateX(" + xRotation + "deg) rotateY(" + yRotation + "deg)";
+        el.style.transform = string;
+      }
+      el.addEventListener("mouseout", function () {
+        el.style.transform =
+          "perspective(500px) scale(1) rotateX(0) rotateY(0)";
+      });
+      el.addEventListener("mousedown", function () {
+        el.style.transform =
+          "perspective(500px) scale(0.9) rotateX(0) rotateY(0)";
+      });
+      el.addEventListener("mouseup", function () {
+        el.style.transform =
+          "perspective(500px) scale(1.1) rotateX(0) rotateY(0)";
+      });
+    </script>
+
+<script>
+    function setCookie(cname,cvalue,exdays) {
+      const d = new Date();
+      d.setTime(d.getTime() + (exdays*10*1000));
+      let expires = "expires=" + d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+    
+    function getCookie(cname) {
+      let name = cname + "=";
+      let decodedCookie = decodeURIComponent(document.cookie);
+      let ca = decodedCookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+    
+    function checkCookie() {
+      let user = getCookie("username");
+      if (user != "") {
+        alert("Welcome again " + user);
+      } else {
+         user = prompt("salut bg, donnes ton nom pr ce cookie qui a 10 secondes d'esperance de vie, merci bg:","");
+         if (user != "" && user != null) {
+           setCookie("username", user, 1);
+         }
+      }
+    }
+    </script>
+    <body onload="checkCookie()"></body>
+  <footer style="  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #FFD495;
+  text-align: center;">
+    <h2>The team</h2>
+    <p>
+        <strong>Lucie Khamlach:</strong>
+        <a href="https://profile.intra.42.fr/users/lkhamlac"> Intra Profile</a>
+    </p>
+    <p>
+        <strong>Julien Taravella:</strong>
+        <a href="https://profile.intra.42.fr/users/jtaravel"> Intra Profile</a>
+    </p>
+  </footer>
+</body>
+
+</html>
