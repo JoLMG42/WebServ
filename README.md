@@ -2,7 +2,7 @@
 
 LocalHost web server.
 You can upload/delete images, uplod some text with PHP or python.
-Use: make and ./webserv <conf file>
+Use: make and ./webserv 'conf file'
 
 This Project was realised with lkhamlac (https://github.com/blessedNholyflavored/)
 
